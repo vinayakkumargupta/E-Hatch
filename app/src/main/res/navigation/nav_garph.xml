@@ -9,10 +9,37 @@
         android:id="@+id/loginFragment"
         android:name="com.example.e_hatch.Auth.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mentorFragment"
+            app:destination="@id/mentorFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_entreprenuerFragment"
+            app:destination="@id/entreprenuerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.e_hatch.Auth.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_entreprenuerFragment"
+            app:destination="@id/entreprenuerFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_mentorFragment"
+            app:destination="@id/mentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entreprenuerFragment"
+        android:name="com.example.e_hatch.Auth.EntreprenuerFragment"
+        android:label="fragment_entreprenuer"
+        tools:layout="@layout/fragment_entreprenuer" />
+    <fragment
+        android:id="@+id/mentorFragment"
+        android:name="com.example.e_hatch.Auth.MentorFragment"
+        android:label="fragment_mentor"
+        tools:layout="@layout/fragment_mentor" />
 </navigation>

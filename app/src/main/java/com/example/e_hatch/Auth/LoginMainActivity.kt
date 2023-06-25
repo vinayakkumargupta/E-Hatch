@@ -2,11 +2,34 @@ package com.example.e_hatch.Auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.e_hatch.R
+import com.example.e_hatch.ViewModels.authlistner
+import com.example.e_hatch.databinding.ActivityLoginMainBinding
 
-class LoginMainActivity : AppCompatActivity() {
+class LoginMainActivity : AppCompatActivity(), authlistner {
+    private lateinit var databinding: ActivityLoginMainBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_main)
+
+
+
+
+
     }
+
+
+    override fun OnStarted() {
+        super.OnStarted()
+    }
+
+    override fun OnSuccess() {
+        super.OnSuccess()
+    }
+
+    override fun OnFailure(message: String) {
+        super.OnFailure(message)
+    }
+
+
 }
